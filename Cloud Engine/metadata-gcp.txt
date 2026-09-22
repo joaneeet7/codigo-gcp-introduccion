@@ -1,0 +1,22 @@
+# Comandos para consultar metadata de una instancia de Google Compute Engine
+
+1. Listar las categorías disponibles de metadata de la instancia:
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/
+
+2. Ver toda la metadata de la instancia:
+curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/instance/?recursive=true"
+
+3. Ver el nombre de la instancia:
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/name
+
+4. Ver la zona:
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/zone
+
+5. Ver el tipo de máquina:
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/machine-type
+
+6. Ver la IP interna:
+curl -H "Metadata-Flavor: Google" http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip
+
+7. Ver la metadata del proyecto:
+curl -H "Metadata-Flavor: Google" "http://metadata.google.internal/computeMetadata/v1/project/?recursive=true"
